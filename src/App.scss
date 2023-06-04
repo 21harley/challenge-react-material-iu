@@ -1,0 +1,23 @@
+:root{
+    --color-blue-one:#004AC1;
+    --color-blue-two:#4B566B;
+    --color-yellow-one:#FFD300;
+    --color-gray-one:#EBEFF4;
+    --color-white-one:#FFFFFF;
+    --color-black-one:#000000;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--color-gray-one);
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+.list-style-none{
+    list-style: none;
+    padding: 0px;
+}
