@@ -15,23 +15,23 @@ export const list_routes=[
         name:"Motocicletas"
     },
     {
-        path:"/item-type/tus-prestamos",
-        url:["/item-type/tus-prestamos"],
+        path:"/item-details/tus-prestamos",
+        url:["/item-details/tus-prestamos"],
         name:"Tus Prestamos"
     },
     {
-        path:"/item-type/tienda",
-        url:["/item-type/tienda"],
+        path:"/item-details/tienda",
+        url:["/item-details/tienda"],
         name:"Tienda"
     },
     {
-        path:"/item-type/tracking",
-        url:["/item-type/tracking"],
+        path:"/item-details/tracking",
+        url:["/item-details/tracking"],
         name:"Tracking"
     },
     {
-        path:"/item-type/club-macropay",
-        url:["/item-type/club-macropay"],
+        path:"/item-details/club-macropay",
+        url:["/item-details/club-macropay"],
         name:"Club Macropay"
     },
 ];
