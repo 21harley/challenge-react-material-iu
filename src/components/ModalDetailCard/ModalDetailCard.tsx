@@ -1,13 +1,28 @@
 import { useAppSelector,useAppDispatch } from "../../reduxer";
 import { setItemsCardSlice } from "../../reduxer/slice/CardItemDetail/CardItemDetail";
+import { Detail } from "../../interfaces/TypeStore";
 import {  initialState } from "../../reduxer/slice/CardItemDetail/ItenrfacesDetailItem";
 import { Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import DoneIcon from '@mui/icons-material/Done';
 import { price_reducer } from "../../tools/functions";
+import { useLocation } from "react-router-dom";
 import "./ModalDetailCard.scss"
 
 export default function ModalDetailCard(){
+  const location = useLocation();
+
+  const filterInfo=(detail:Detail|undefined)=>{
+    if(detail){
+      switch(location.state){
+        case "Motocicletas":
+          return detail.dimensions;
+        case "Celulares":
+          return detail.memory;
+       }
+    }
+   return ""
+  }
     const cardDetail = useAppSelector(state => {
         return state.CardItemDetails
       })
@@ -19,6 +34,7 @@ export default function ModalDetailCard(){
 
     if(cardDetail.status==="Modal"){
         const item=cardDetail.detailItem;
+        const detail=item?.details;
         const valor=price_reducer(item?.sales??1 ,item?.price??1);
         return(
             <>
@@ -39,7 +55,7 @@ export default function ModalDetailCard(){
                             </div>
                             <div className="container-title">
                                  <span className="title-name">{item?.name}</span>
-                                 <span className="title-memory">{item?.details.memory}</span>
+                                 <span className="title-memory">{filterInfo(detail)}</span>
                                  <span className="title-color">Color Selecionado: <strong>{item?.details.color}</strong></span>
                                  <span className="title-buy-cost">${valor}x1</span>
                             </div>

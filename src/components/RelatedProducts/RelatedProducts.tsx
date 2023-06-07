@@ -22,7 +22,7 @@ export default function RelatedProducts() {
 
     const auxLista = (!lista?.liastItem)
         ?[]
-        :((lista?.liastItem.length>=4)?lista?.liastItem.slice(0,4):[]);
+        :((lista?.liastItem.length>=4)?[...lista?.liastItem??[]].slice(0,4):[]);
         console.log(auxLista)
       
     return(
