@@ -61,6 +61,11 @@
         text-decoration: line-through;
         color: var(--color-gray-two);
     }
+    & svg{
+        font-size: 0.9rem;
+        text-decoration: line-through;
+        color: var(--color-yellow-one);
+    }
     & p{
         font-size: 0.8rem;
         margin: 0px;
@@ -74,7 +79,7 @@
     font-size: 0.8rem
 }
 .star-color{
-    color: var(--color-yellow-one);
+    color: var(--color-yellow-one) !important;
     &  .css-1vooibu-MuiSvgIcon-root{
         color: var(--color-yellow-one);
         width: 1.2rem;
