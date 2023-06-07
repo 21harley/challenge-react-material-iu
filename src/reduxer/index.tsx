@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import StoreItems from './slice/StoreItems/StoreItems'
+import CardItemDetails from './slice/CardItemDetail/CardItemDetail'
 import {
   TypedUseSelectorHook,
   useDispatch,
@@ -8,7 +9,8 @@ import {
 
 const store = configureStore({
   reducer: {
-    StoreItems
+    StoreItems,
+    CardItemDetails
   },
   
   middleware: getDefaultMiddleware =>

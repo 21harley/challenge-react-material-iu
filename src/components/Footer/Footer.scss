@@ -5,16 +5,17 @@
     margin: 0px;
     padding: 0px;
     overflow: hidden;
-    
     @media screen and (max-width: 1040px) {
         background-color: var(--color-yellow-one);
         overflow: inherit;
+        margin-top: 8rem;
     }
     @media screen and (max-width: 930px) {
         height: 45rem;
     }
     @media screen and (max-width: 600px) {
         height: 55rem;
+        margin-top: 10rem;
     }
         
 }
@@ -56,11 +57,11 @@
 .container-footer-logo{
   background-color: var(--color-blue-one);
   height: 3.5rem;
-  width: 10rem;
+  width: 100%;
+  max-width: 165px;
   border-radius: 1rem;
   display: grid;
   place-items: center;
-  margin: auto;
   > .footer-logo{
     height: 4rem;
     width: 9rem;
@@ -68,6 +69,7 @@
   @media screen and (max-width: 1040px) {
     height: 2.5rem;
     width: 8rem;
+    margin: auto;
     > .footer-logo{
         height: 2.5rem;
         width: 6rem;
@@ -88,7 +90,7 @@
 .container-text-link{
    display: grid;
    width: 100%;
-   max-width: 450px;
+   max-width: 550px;
    margin-bottom: 2rem;
    gap: 1rem;
    color: var(--color-black-one);
@@ -109,6 +111,7 @@
         }
         & > p{
             font-size: medium;
+            text-align: center;
         }
    }
 }

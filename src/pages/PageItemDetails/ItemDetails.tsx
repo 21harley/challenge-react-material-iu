@@ -1,11 +1,10 @@
 import { TemplatePage } from "../template/TemplatePage/TemplatePage"
+import ViewItems from "../../components/ViewItems/ViewItems";
 
 export default function ItemDetails() {
     return(
         <TemplatePage>
-        <div>
-            <h1>ItemDetails</h1>
-        </div>
+          <ViewItems/>
         </TemplatePage>
     )
 }

@@ -10,9 +10,12 @@ const StoreItem = createSlice({
     initState: (state) => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       state = initialState
-    }
+    },
+    setStoreItems: (state, action) => {
+      return action.payload.pages
+    },
   },
 
 })
-export const { initState } = StoreItem.actions
+export const { initState,setStoreItems } = StoreItem.actions
 export default StoreItem.reducer

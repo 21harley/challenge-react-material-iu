@@ -1,0 +1,75 @@
+.container-serch{
+    width: 500px;
+    height: 35px;
+    display: flex;
+    & input[type="text"]{
+        width:300px;
+        background-color: transparent;
+        height: 80%;
+        border: none;
+        @media screen and (max-width: 840px) {
+            width: 100%;
+        }
+    }
+    & .color-container-serch{
+        background-color: var(--color-white-one);
+        display: flex;
+        align-items: center;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        & input[type="text"]{
+            color: var(--color-black-one);
+        }
+    }
+    & .MuiSvgIcon-root{
+        color:var(--color-gray-two);
+        margin-right: 5px;
+        margin-left:0.5rem ;
+    }
+    /* Selector serch-custom*/
+    & .MuiSelect-iconOutlined{
+        color:var(--color-white-one) !important;
+        z-index: 1;
+        top: 5px;
+        right: 1px;
+    }
+    & .formControl-select{
+        width:160px;
+    }
+    & .MuiInputBase-formControl{
+        width:160px;
+    }
+    & .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+        padding: 0px;
+        width: 160px;
+        display: grid;
+        place-items: center;
+        height: 30px !important;
+        color: var(--color-white-one);
+        z-index: 3;
+    }
+    & .MuiOutlinedInput-notchedOutline{
+        width: 150px;
+        height: 40px;
+        border: none !important;
+        background-color: var(--color-gray-three);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        color: var(--color-white-one);
+    }
+    & .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+        top:-6px;
+        color: var(--color-white-one);
+        font-size: small;
+    }
+    & .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+         color: transparent;
+    } 
+    & .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
+        color: transparent;
+    }
+    @media screen and (max-width: 840px) {
+        width: auto;
+        margin: auto;
+    }       
+}

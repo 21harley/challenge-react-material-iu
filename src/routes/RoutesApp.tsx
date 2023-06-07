@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import ErrorPage from "../pages/PageError404/Error404"
 import Home from '../pages/PageHome/Home'
 import ItemDetails from '../pages/PageItemDetails/ItemDetails'

@@ -1,0 +1,30 @@
+.related-products{
+    width: 100%;
+    & > h2{
+        font-size: 1.5rem;
+        color: var(--color-black-one);
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+.grid-related-products{
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    max-width: 1200px;
+    gap: 1rem;
+    margin: auto;
+    height: 100%;
+    padding: 2px 0px 2px 0px;
+    @media screen and (max-width: 1200px) {
+        justify-content: flex-start;
+        padding-left: 2rem;
+        width: calc(100% - 2rem);
+    }
+}
