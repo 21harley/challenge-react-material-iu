@@ -13,8 +13,7 @@ export default function ModalDetailCard(){
       })
     const dispatch = useAppDispatch();
 
-    const handleCloseModal = (event: React.MouseEvent<HTMLButtonElement,MouseEvent>) =>{
-        console.log("Cerrar")
+    const handleCloseModal = () =>{
         dispatch(setItemsCardSlice(initialState));
     }
 
@@ -28,7 +27,7 @@ export default function ModalDetailCard(){
                     <div className="header-modal-detail">
                           <img className="img-header-modal-detail" src={item?.images[0]} alt={item?.name} />
                           <div className="header-modal-detail__button-close">
-                             <Button onClick={(e)=>{handleCloseModal(e)}} >
+                             <Button onClick={()=>{handleCloseModal()}} >
                                 <CloseIcon />
                              </Button>
                           </div>

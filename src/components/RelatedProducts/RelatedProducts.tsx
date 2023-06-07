@@ -11,12 +11,18 @@ export default function RelatedProducts() {
     const location = useLocation();
     const [listFavorite,setListFavorite]=React.useState<Item[]>([]);
     const store = useAppSelector(state => state.StoreItems );
-   
-    const lista = store?.filter((item:DatePage) => item.name_page === location.state)[0]??[];
-    
-    const auxLista = (!lista.liastItem)
+    const auxData:DatePage={
+        name_page:"",
+        brands:[],
+        rate:[],
+        liastItem:[],
+    }
+    const lista  = (store.liastPages)? store.liastPages.filter((item: DatePage) => item.name_page === location.state)[0]:auxData;
+    console.log(lista,"lista")
+
+    const auxLista = (!lista?.liastItem)
         ?[]
-        :((lista?.liastItem.length>=4)?lista.liastItem.slice(0,4):[]);
+        :((lista?.liastItem.length>=4)?lista?.liastItem.slice(0,4):[]);
         console.log(auxLista)
       
     return(

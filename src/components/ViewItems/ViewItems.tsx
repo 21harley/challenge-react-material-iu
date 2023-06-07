@@ -12,18 +12,25 @@ export default function ViewItems() {
     const location = useLocation();
 
     const store = useAppSelector(state => state.StoreItems );
-    
-    const lista = store?.filter((item:DatePage) => item.name_page === location.state)[0]??[];
+
+    const auxData:DatePage={
+        name_page:"",
+        brands:[],
+        rate:[],
+        liastItem:[],
+    }
+
+    const lista = (store.liastPages)? store.liastPages.filter((item: DatePage) => item.name_page === location.state)[0]:auxData;
     
     const controlBar:ControlBarType={
-        brand:lista?.brands??[],
+        brand:lista?.brands??[""],
         rate:(lista?.rate)?lista.rate:[1,4000],
         review_number:0,
         isFavorite:""
     }
 
     const [stateControl, setstateControl] = React.useState({
-        brand:[],
+        brand:[""],
         rate:(lista?.rate)?lista.rate:[1,10000],
         review_number:0,
         isFavorite:""
@@ -64,7 +71,7 @@ export default function ViewItems() {
        return lista.liastItem.filter((item:Item) => {
               if(serchString.length>0 && validate_String(item.name,serchString)) return false
               if((stateControl.rate[0]>item.price || stateControl.rate[1]<item.price)) return false
-              if(stateControl.brand.length>0 && !stateControl.brand.includes(item?.brand)) return false
+              if (stateControl.brand.length > 0 && !stateControl.brand.includes(item.brand)) return false;
               if(stateControl.review_number>0 && item.review_number<stateControl.review_number) return false
               return true
        })

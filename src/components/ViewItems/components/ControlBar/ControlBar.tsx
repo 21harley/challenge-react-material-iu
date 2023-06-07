@@ -112,6 +112,7 @@ export default function ControlBar(
                         name="simple-controlled"
                         value={value}
                         onChange={(event, newValue) => {
+                            event.preventDefault();
                             setValue(newValue);
                             handleCheckRating(newValue);
                         }}

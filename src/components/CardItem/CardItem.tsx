@@ -25,8 +25,8 @@ export default function CardItem({item,listFavorite,setListFavorite}: {item:Item
         ?setListFavorite([...listFavorite,item])
         :setListFavorite([...listFavorite.filter((itemList)=>{return itemList.id!==item.id})]);
     }
-    
-    const detectClickCard=(e:React.MouseEvent<HTMLDivElement,MouseEvent>)=>{
+
+    const detectClickCard=()=>{
         const classNames = [
             "button-buy",
             "title-item-card",
@@ -39,7 +39,7 @@ export default function CardItem({item,listFavorite,setListFavorite}: {item:Item
         } 
     }
     return(
-    <Card  className="card-item" onClick={(e)=>{detectClickCard(e)}}>
+    <Card  className="card-item" onClick={()=>{detectClickCard()}}>
         <CardMedia
           sx={{ height: 340 }}
           image={item.images[0]}

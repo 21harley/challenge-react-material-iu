@@ -2,17 +2,15 @@ import { createSlice } from '@reduxjs/toolkit'
 
 import { initialState } from './IterfacesItem'
 
-// eslint-disable-next-line react-refresh/only-export-components
 const StoreItem = createSlice({
   name: 'StoreItems',
   initialState,
   reducers: {
     initState: (state) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      state = initialState
+      state.liastPages = initialState.liastPages
     },
     setStoreItems: (state, action) => {
-      return action.payload.pages
+      state.liastPages = action.payload.pages
     },
   },
 

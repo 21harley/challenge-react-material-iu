@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom";
 import {list_routes} from "./NavbarData";
-import Button from '@mui/material/Button';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import "./Navbar.scss"
 import CustomizedDialogs from "../ModalTemplate/ModalTemplate";
