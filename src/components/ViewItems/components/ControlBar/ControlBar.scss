@@ -22,7 +22,7 @@
         border: none !important;
         border-left: 1px solid var(--color-gray-two) !important;
         border-radius: 0px !important;
-        height: 34px;
+        height: 34px !important;
     }
     & label{
         color:var(--color-black-one) !important;
@@ -30,22 +30,22 @@
         background-color: var(--color-gray-one) !important;
         font-weight: 600 !important;
         top: -10px !important;
-        transition: all 0.5s;
+        transition: all 0.5s !important;
     }
     & .MuiSelect-iconOutlined{
-        z-index: 1;
-        top: 5px;
-        right: 1px;
+        z-index: 1 !important;
+        top: 5px !important;
+        right: 1px !important;
     }
     & .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
-        display: grid;
-        place-items: center;
+        display: grid !important;
+        place-items: center !important;
         height: 30px !important;
-        padding: 0px;
+        padding: 0px !important;
     }
     & .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
-        visibility: hidden;
-        opacity: 0;
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
 }
 .list-Control-Bar{
